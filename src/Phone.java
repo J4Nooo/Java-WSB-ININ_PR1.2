@@ -7,4 +7,14 @@ public class Phone extends Device
         Producent = producent;
         Model = model;
     }
+
+    @Override
+    void recharge(Integer percentage) {
+
+    }
+
+    @Override
+    boolean isOn() {
+        return false;
+    }
 }

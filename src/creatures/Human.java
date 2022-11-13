@@ -1,3 +1,5 @@
+package creatures;
+
 public class Human extends Animal {
     String firstName;
     String lastName;
@@ -14,7 +16,7 @@ public class Human extends Animal {
     public void getCar (){
         System.out.println(this.car);
     }
-
+/*
     public void setCar(Car vehicle){
         if(salary > vehicle.value){
             System.out.println("Gratulacje! Udało ci się zakupić samochód za gotówkę");
@@ -28,7 +30,7 @@ public class Human extends Animal {
             System.out.println("Ślepa uliczka, koniec gry - znajdź nową pracę albo idz po podwyżkę, chyba że nadal chcesz jeździć drepcedesem");
 
         }
-    }
+    }*/
  public void setSalary(Double salary) {
      if (salary >= 0) {
          this.salary = salary;
@@ -43,6 +45,15 @@ public class Human extends Animal {
          System.out.println("Dane o twojej wypłacie pobierane były 09:23 19.04.2041");
          return this.salary;
      }
+    /*
+    public void beEaten(){
+         System.out.println("Chyba cie poebao");
+     }*/
+    //Jedna albo druga opcja jest wlasciwa ale druga poprawniejsza
+    /*
+    public void beEaten() throws Exception{
+        throw new Exception("Nie ma opcji");
+    }*/
 
 }
 

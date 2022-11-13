@@ -1,4 +1,6 @@
-public class Animal {
+package creatures;
+
+public class Animal implements Edible{
     private static final Double DEFAULT_DOG_WEIGHT = 12.3;
     private static final Double DEFAULT_CAT_WEIGHT = 5.0;
     private static final Double DEFAULT_MOUSE_WEIGHT = 0.2;
@@ -6,11 +8,11 @@ public class Animal {
 
 
     String specie;
-    String name;
-    Boolean isAlive;
+    public String name;
+    public Boolean isAlive;
     Double weight;
 
-    Animal(String specie) {
+    public Animal(String specie) {
         this.specie = specie;
         this.isAlive = true;
 
@@ -28,7 +30,7 @@ public class Animal {
         }
     }
 
-    void feed(){
+    public void feed(){
         if (this.isAlive = true){
         this.weight += 0.5;
         System.out.println("dzięki za żarcie");}
@@ -36,7 +38,7 @@ public class Animal {
             System.out.println("Czy wszystko dobrze z głową?");
         }
     }
-    void takeForAWalk(){
+    public void takeForAWalk(){
         if (this.isAlive = true){
             this.weight -= 1;
             System.out.println("Dziękuję bardzo za spacer");
@@ -51,5 +53,27 @@ public class Animal {
         }
 
     }
+    @Override
+    public void beEaten() {
+        if (this instanceof Human) {
+            System.out.println("Call 911");
+        }
+        else {
+            this.isAlive = false;
+            this.weight = 0.0;
+            System.out.println("Mam nadzieję, że smakowało");
+        }
+    }
+
+    @Override
+    public boolean isPoisoned() {
+        if (this.specie.equals("snake")){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 
 }

@@ -1,3 +1,6 @@
+import creatures.Animal;
+import creatures.Human;
+
 public class Main {
     public static void main(String[] args) {
         Animal dog = new Animal("canis");
@@ -9,7 +12,7 @@ public class Main {
         dog.takeForAWalk();
 
         Human me = new Human();
-        Phone mine = new Phone("Samsung","Z3");
+        Phone iphone = new Phone("Samsung","Z3");
 
 
 
@@ -20,6 +23,10 @@ public class Main {
         System.out.println(esa.Producent);
         System.out.println(esa.Model);
         System.out.println(esa);
+
+        iphone.recharge(100);
+
+
 
 
 

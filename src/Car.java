@@ -3,7 +3,7 @@ public class Car extends Device
 
     Double Przebieg;
     String Wlasnosc;
-    Double value;
+    public Double value;
 
     public Car(String producent, String model) {
         super(producent, model);
@@ -11,8 +11,20 @@ public class Car extends Device
         Model = model;
     }
 
+    @Override
+    void recharge(Integer percentage) {
+        System.out.printf("Ładuję");
+        System.out.println("Ładuję");
+        System.out.println("Nałdowane");
+    }
 
-     public static void main(String Producent, String Model) {
+    @Override
+    boolean isOn() {
+        return false;
+    }
+
+
+    public static void main(String Producent, String Model) {
         System.out.println(new Car("Audi","S4")
                  .equals(new Car("Audi","S4")));
                  }

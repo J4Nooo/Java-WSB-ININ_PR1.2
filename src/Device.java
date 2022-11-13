@@ -1,4 +1,4 @@
-public class Device {
+public abstract class Device {
     String Producent;
     String Model;
 
@@ -6,4 +6,6 @@ public class Device {
         Producent = producent;
         Model = model;
     }
+    abstract void recharge(Integer percentage);
+    abstract boolean isOn();
 }
