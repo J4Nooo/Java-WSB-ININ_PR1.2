@@ -9,10 +9,8 @@ public class Main {
         dog.takeForAWalk();
 
         Human me = new Human();
-        me.firstName = "Jan";
-        me.pet = dog;
-        System.out.println(me.pet.name);
-        System.out.println(me.pet.weight);
+        Phone mine = new Phone("Samsung","Z3");
+
 
 
         Car esa = new Car("Audi","S3");
@@ -22,6 +20,7 @@ public class Main {
         System.out.println(esa.Producent);
         System.out.println(esa.Model);
         System.out.println(esa);
+
 
 
     }

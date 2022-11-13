@@ -1,12 +1,12 @@
-public class Car {
+public class Car extends Device
+{
 
-    final String Producent;
-    final String Model;
     Double Przebieg;
     String Wlasnosc;
     Double value;
 
     public Car(String producent, String model) {
+        super(producent, model);
         Producent = producent;
         Model = model;
     }

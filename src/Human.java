@@ -1,9 +1,15 @@
-public class Human {
+public class Human extends Animal {
     String firstName;
     String lastName;
     private Double salary;
     private String car;
     Animal pet;
+
+    public Human() {
+        super("homo sapiens");
+        salary = 0.0;
+        System.out.println("Witaj");
+    }
 
     public void getCar (){
         System.out.println(this.car);
