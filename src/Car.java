@@ -4,8 +4,7 @@ public class Car {
     final String Model;
     Double Przebieg;
     String Wlasnosc;
-    String Kolor;
-    Double Moc;
+    Double value;
 
     public Car(String producent, String model) {
         Producent = producent;

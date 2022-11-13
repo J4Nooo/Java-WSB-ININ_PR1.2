@@ -11,7 +11,6 @@ public class Main {
         Human me = new Human();
         me.firstName = "Jan";
         me.pet = dog;
-        me.salary = 4500.0;
         System.out.println(me.pet.name);
         System.out.println(me.pet.weight);
 
