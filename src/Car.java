@@ -3,6 +3,7 @@ public class Car {
     final String Producent;
     final String Model;
     Double Przebieg;
+    String Wlasnosc;
     String Kolor;
     Double Moc;
 
