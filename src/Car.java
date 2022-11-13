@@ -10,7 +10,16 @@ public class Car {
         Producent = producent;
         Model = model;
     }
-    public String toString(){
+
+
+     public static void main(String Producent, String Model) {
+        System.out.println(new Car("Audi","S4")
+                 .equals(new Car("Audi","S4")));
+                 }
+
+
+    public String toString() {
         return "Producent: " + this.Producent + " Model: " + this.Model;
+    }
 }
-}
+
