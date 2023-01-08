@@ -75,5 +75,9 @@ public class Animal implements Edible{
         }
     }
 
+    public String toString(){
+        return this.specie + " " + name;
+    }
+
 
 }

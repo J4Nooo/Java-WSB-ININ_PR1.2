@@ -55,5 +55,8 @@ public class Human extends Animal {
         throw new Exception("Nie ma opcji");
     }*/
 
+    public String toString(){
+        return "No elo, jestem " + this.name;
+    }
 }
 

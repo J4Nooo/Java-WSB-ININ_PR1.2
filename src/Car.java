@@ -1,4 +1,4 @@
-public class Car extends Device
+public abstract class Car extends Device
 {
 
     Double Przebieg;
@@ -10,6 +10,10 @@ public class Car extends Device
         Producent = producent;
         Model = model;
     }
+
+    public abstract void refuel();
+
+
 
     @Override
     void recharge(Integer percentage) {
@@ -24,10 +28,10 @@ public class Car extends Device
     }
 
 
-    public static void main(String Producent, String Model) {
-        System.out.println(new Car("Audi","S4")
-                 .equals(new Car("Audi","S4")));
-                 }
+//    public static void main(String Producent, String Model) {
+//        System.out.println(new Car("Audi","S4")
+//                 .equals(new Car("Audi","S4")));
+//                 }
 
 
     public String toString() {
