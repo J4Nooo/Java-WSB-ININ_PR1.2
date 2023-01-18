@@ -3,12 +3,15 @@ public abstract class Car extends Device
 
     Double Przebieg;
     String Wlasnosc;
-    public Double value;
+    public Double Value;
 
-    public Car(String producent, String model) {
+    public Car(String producent, String model, Double przebieg, Double value) {
         super(producent, model);
         Producent = producent;
         Model = model;
+        Przebieg = przebieg;
+        Value = value;
+
     }
 
     public abstract void refuel();
@@ -17,7 +20,7 @@ public abstract class Car extends Device
 
     @Override
     void recharge(Integer percentage) {
-        System.out.printf("Ładuję");
+        System.out.print("Ładuję");
         System.out.println("Ładuję");
         System.out.println("Nałdowane");
     }
