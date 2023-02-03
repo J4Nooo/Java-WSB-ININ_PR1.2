@@ -54,7 +54,7 @@ public class Animal implements Edible{
 
     }
     @Override
-    public void beEaten() {
+    public void beEaten() throws Exception {
         if (this instanceof Human) {
             System.out.println("Call 911");
         }

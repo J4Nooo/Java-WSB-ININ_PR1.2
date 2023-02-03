@@ -1,8 +1,10 @@
+package devices;
+
 public class Diesel extends Car
 {
 
-    public Diesel(String producent, String model) {
-        super(producent, model);
+    public Diesel(String producent, String model, Double przebieg, Double value) {
+        super(producent, model, przebieg, value);
     }
 
     @Override

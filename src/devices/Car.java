@@ -1,12 +1,14 @@
+package devices;
+
 public abstract class Car extends Device
 {
 
     Double Przebieg;
     String Wlasnosc;
-    public Double Value;
+
 
     public Car(String producent, String model, Double przebieg, Double value) {
-        super(producent, model);
+        super(producent, model, value);
         Producent = producent;
         Model = model;
         Przebieg = przebieg;
@@ -19,26 +21,26 @@ public abstract class Car extends Device
 
 
     @Override
-    void recharge(Integer percentage) {
+    public void recharge(Integer percentage) {
         System.out.print("Ładuję");
         System.out.println("Ładuję");
         System.out.println("Nałdowane");
     }
 
     @Override
-    boolean isOn() {
+    public boolean isOn() {
         return false;
     }
 
 
 //    public static void main(String Producent, String Model) {
-//        System.out.println(new Car("Audi","S4")
-//                 .equals(new Car("Audi","S4")));
+//        System.out.println(new devices.Car("Audi","S4")
+//                 .equals(new devices.Car("Audi","S4")));
 //                 }
 
 
     public String toString() {
-        return "Producent: " + this.Producent + " Model: " + this.Model;
+        return "Producent: " + this.Producent + " Model: " + this.Model + " Przebieg: " + this.Przebieg + " Wartość: " + this.Value;
     }
 }
 
