@@ -1,8 +1,6 @@
 import creatures.Animal;
 import creatures.Human;
-import devices.Car;
-import devices.Diesel;
-import devices.Phone;
+import devices.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -70,11 +68,38 @@ public class Main {
 //
 
         //Arrays.sort() sortuje tablicę
-        Integer[] numbers = { 3, 51, 41, 14, 421, 90, 4, 5, 82};
-        Arrays.sort(numbers);
-        for(Integer number : numbers){
-            System.out.println(number);
+//        Integer[] numbers = { 3, 51, 41, 14, 421, 90, 4, 5, 82};
+//        Arrays.sort(numbers);
+//        for(Integer number : numbers){
+//            System.out.println(number);
+//        }
+//
+//        Car[] cars = new Car[3];
+//        cars[0] = new Electric("Tesla", "S", 1200.0, 131332.0);
+//        cars[1] = new Diesel("Volkswagen", "Passat", 323.0, 11000.0);
+//        cars[2] = new LPG("Alfa Romeo", "147", 200000.0, 15000.0);
+//
+//        Arrays.sort(cars);
+//        for (Car car : cars) {
+//            System.out.println(car);
+//        }
+
+
+        Car Tesla = new Electric("Tesla", "S", 1200.0, 131332.0, 2021);
+        Car VW = new Diesel("Volkswagen", "Passat", 323.0, 11000.0, 2001);
+        Car Alfa = new LPG("Alfa Romeo", "147", 200000.0, 15000.0, 1998);
+
+        Human me = new Human();
+        me.setCar(Tesla, 0);
+        me.setCar(VW, 1);
+        me.setCar(Alfa,2);
+
+        me.sortCarsByYear();
+
+        for(int i = 0; i < Human.DEFAULT_GARAGE_SIZE; i++){
+            System.out.println(me.getCar(i));
         }
+
 
     }
 }

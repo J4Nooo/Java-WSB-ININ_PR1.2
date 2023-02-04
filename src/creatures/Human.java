@@ -1,9 +1,11 @@
 package creatures;
 
 import devices.Car;
-import java.util.ArrayList;
 
-public class Human extends Animal {
+import java.util.Arrays;
+
+
+public class Human extends Animal{
 
     public final static Integer DEFAULT_GARAGE_SIZE = 3;
     public final static Double DEFAULT_SALARY = 0.0;
@@ -52,6 +54,10 @@ public class Human extends Animal {
         return sum;
     }
 
+    public void sortCarsByYear(){
+        Arrays.sort(this.garage);
+    }
+
  public void setSalary(Double salary) {
      if (salary >= 0) {
          this.salary = salary;
@@ -78,5 +84,8 @@ public class Human extends Animal {
     public String toString(){
         return "No elo, jestem " + this.name;
     }
+
+
+
 }
 

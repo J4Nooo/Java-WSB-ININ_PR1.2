@@ -1,18 +1,20 @@
 package devices;
 
-public abstract class Car extends Device
+public abstract class Car extends Device implements Comparable<Car>
 {
 
     Double Przebieg;
     String Wlasnosc;
+    Integer Rok;
 
 
-    public Car(String producent, String model, Double przebieg, Double value) {
+    public Car(String producent, String model, Double przebieg, Double value, Integer rok) {
         super(producent, model, value);
         Producent = producent;
         Model = model;
         Przebieg = przebieg;
         Value = value;
+        Rok = rok;
 
     }
 
@@ -40,7 +42,11 @@ public abstract class Car extends Device
 
 
     public String toString() {
-        return "Producent: " + this.Producent + " Model: " + this.Model + " Przebieg: " + this.Przebieg + " Wartość: " + this.Value;
+        return "Producent: " + this.Producent + " Model: " + this.Model + " Przebieg: " + this.Przebieg + " Wartość: " + this.Value + " Rok Produkcji: " + this.Rok;
+    }
+    @Override
+    public int compareTo(Car otherCar) {
+        return this.Rok.compareTo(otherCar.Rok);
     }
 }
 
