@@ -16,4 +16,8 @@ public abstract class Device {
 
     abstract void recharge(Integer percentage);
     abstract boolean isOn();
+
+    public String toString(){
+        return "Producent: " + this.Producent + " Model: " + this.Model + " Wartość: " + this.Value;
+    }
 }

@@ -43,4 +43,8 @@ public class Phone extends Device
     boolean isOn() {
         return false;
     }
+
+    public String toString(){
+        return "Telefon marki: " + this.Producent + " o modelu: " + this.Model + " kosztuje: " + this.Value;
+    }
 }

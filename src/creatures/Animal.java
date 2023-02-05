@@ -16,17 +16,11 @@ public class Animal implements Edible{
         this.specie = specie;
         this.isAlive = true;
 
-        switch(specie){
-            case "cat":
-                this.weight = DEFAULT_CAT_WEIGHT;
-                break;
-            case "dog":
-                this.weight = DEFAULT_DOG_WEIGHT;
-                break;
-            case "mouse":
-                this.weight = DEFAULT_MOUSE_WEIGHT;
-                break;
-            default: this.weight = DEFAULT_ANIMAL_WEIGHT;
+        switch (specie) {
+            case "cat" -> this.weight = DEFAULT_CAT_WEIGHT;
+            case "dog" -> this.weight = DEFAULT_DOG_WEIGHT;
+            case "mouse" -> this.weight = DEFAULT_MOUSE_WEIGHT;
+            default -> this.weight = DEFAULT_ANIMAL_WEIGHT;
         }
     }
 
@@ -67,12 +61,7 @@ public class Animal implements Edible{
 
     @Override
     public boolean isPoisoned() {
-        if (this.specie.equals("snake")){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return this.specie.equals("snake");
     }
 
     public String toString(){

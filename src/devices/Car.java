@@ -1,6 +1,9 @@
 package devices;
 
-public abstract class Car extends Device implements Comparable<Car>
+
+import creatures.Human;
+
+public abstract class Car extends Device implements Comparable<Car>, Saleable
 {
 
     Double Przebieg;
@@ -35,18 +38,30 @@ public abstract class Car extends Device implements Comparable<Car>
     }
 
 
-//    public static void main(String Producent, String Model) {
-//        System.out.println(new devices.Car("Audi","S4")
-//                 .equals(new devices.Car("Audi","S4")));
-//                 }
-
-
     public String toString() {
         return "Producent: " + this.Producent + " Model: " + this.Model + " Przebieg: " + this.Przebieg + " Wartość: " + this.Value + " Rok Produkcji: " + this.Rok;
     }
     @Override
     public int compareTo(Car otherCar) {
         return this.Rok.compareTo(otherCar.Rok);
+    }
+
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+        if (!seller.hasACar(this)){
+            throw new Exception("Sprzedawca nie posiada samochodu");
+        }
+        if(!buyer.canHaveMoreCars()){
+            throw new Exception("Kupujący nie ma miejsca na nowy samochód");
+        }
+        if(buyer.hasLessMoneyThen(price)){
+            throw new Exception("Kupujący nie posiada wystarczającej ilości pieniędzy");
+        }
+        seller.removeCar(this);
+        buyer.addCar(this);
+        seller.addMoney(price);
+        buyer.collectMoney(price);
+        System.out.println("Transakcja się powiodła");
+
     }
 }
 

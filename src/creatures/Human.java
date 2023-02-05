@@ -36,11 +36,17 @@ public class Human extends Animal{
     }
 
     public void setCar(Car car, Integer parkingSpot){
-        if(this.garage[parkingSpot] == null) {
-            this.garage[parkingSpot] = car;
+        if(parkingSpot >= garage.length){
+            System.out.println("Garaż jest za mały");
         }
-        else {
+        else if(parkingSpot < 0){
+            System.out.println("Nie ma ujemnych miejsc parkingowych");
+        }
+        else if(this.garage[parkingSpot] != null){
             System.out.println("Miejsce parkingowe zajęte");
+        }
+        else{
+            this.garage[parkingSpot] = car;
         }
     }
 
@@ -72,10 +78,6 @@ public class Human extends Animal{
          return salary;
      }
 
-//    public void beEaten(){
-//         System.out.println("Chyba cie poebao");
-//
-//    Jedna albo druga opcja jest wlasciwa ale druga poprawniejsza
 
     public void beEaten() throws Exception{
         throw new Exception("Nie ma opcji");
@@ -86,6 +88,46 @@ public class Human extends Animal{
     }
 
 
+    public boolean hasACar(Car car) {
+        boolean hasACar = false;
+        for (Car value : this.garage) {
+            if (value == car) {
+                hasACar = true;
+                break;
+            }
+        }
+        return hasACar;
+    }
 
+    public boolean canHaveMoreCars() {
+        boolean canHaveMoreCars = true;
+        for (Car value : this.garage) {
+            if (value == car) {
+                canHaveMoreCars = false;
+                break;
+            }
+        }
+        return canHaveMoreCars;
+    }
+
+    public boolean hasLessMoneyThen(Double price) {
+        return salary >= car.Value;
+    }
+
+    public void removeCar(Car car) {
+
+    }
+
+    public void addMoney(Double price) {
+        salary+=price;
+    }
+
+    public void collectMoney(Double price) {
+        salary-=price;
+    }
+
+    public void addCar(Car car) {
+
+    }
 }
 

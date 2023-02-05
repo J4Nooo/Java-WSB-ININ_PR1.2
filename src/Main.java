@@ -8,6 +8,11 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+//
+//        Poniżej testy funkcjonalności
+//
+//
+//
 //        Animal dog = new Animal("canis");
 //        dog.name = "Burek";
 //
@@ -16,12 +21,6 @@ public class Main {
 //
 //        System.out.println(dog);
 //        System.out.println(jan);
-//
-//
-//
-//        Komentowanie kilku wierszy: zaznaczyc i ctrl+/
-//        W druga strone to samo
-//
 //
 //        dog.isAlive = true;
 //
@@ -33,7 +32,6 @@ public class Main {
 //
 //
 //        devices.Phone iphone = new devices.Phone("Samsung","Z3");
-//
 //
 //
 //        Car esa = new Car("Audi", "S3", 65000.0, 120000.0) {
@@ -66,8 +64,7 @@ public class Main {
 //        nokia.installAnApp("Tweeter", "5.10");
 //        nokia.installAnApp("Spotify", "3.00", "https://spotify.com");
 //
-
-        //Arrays.sort() sortuje tablicę
+//        Arrays.sort() sortuje tablicę
 //        Integer[] numbers = { 3, 51, 41, 14, 421, 90, 4, 5, 82};
 //        Arrays.sort(numbers);
 //        for(Integer number : numbers){
@@ -83,23 +80,22 @@ public class Main {
 //        for (Car car : cars) {
 //            System.out.println(car);
 //        }
-
-
-        Car Tesla = new Electric("Tesla", "S", 1200.0, 131332.0, 2021);
-        Car VW = new Diesel("Volkswagen", "Passat", 323.0, 11000.0, 2001);
-        Car Alfa = new LPG("Alfa Romeo", "147", 200000.0, 15000.0, 1998);
-
-        Human me = new Human();
-        me.setCar(Tesla, 0);
-        me.setCar(VW, 1);
-        me.setCar(Alfa,2);
-
-        me.sortCarsByYear();
-
-        for(int i = 0; i < Human.DEFAULT_GARAGE_SIZE; i++){
-            System.out.println(me.getCar(i));
-        }
-
+//
+//        Car Tesla = new Electric("Tesla", "S", 1200.0, 131332.0, 2021);
+//        Car VW = new Diesel("Volkswagen", "Passat", 323.0, 11000.0, 2001);
+//        Car Alfa = new LPG("Alfa Romeo", "147", 200000.0, 15000.0, 1998);
+//
+//        Human me = new Human();
+//        me.setCar(Tesla, 0);
+//        me.setCar(VW, 1);
+//        me.setCar(Alfa,2);
+//
+//        me.sortCarsByYear();
+//
+//        for(int i = 0; i < Human.DEFAULT_GARAGE_SIZE; i++){
+//            System.out.println(me.getCar(i));
+//        }
+//
 
     }
 }
